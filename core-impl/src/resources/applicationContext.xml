@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+	   					   http://www.springframework.org/schema/beans/spring-beans.xsd
+	   					   http://www.springframework.org/schema/context
+	                        http://www.springframework.org/schema/context/spring-context-2.5.xsd">
+
+    <context:property-placeholder location="classpath:application.properties"/>
+    <context:component-scan base-package="springhometask"/>
+
+    <bean id="Ivan" class="springhometask.api.model.Contact">
+        <property name="firstName" value="Ivan"/>
+        <property name="lastName" value="Ivanov"/>
+        <property name="phoneNumber" value="1"/>
+    </bean>
+
+    <bean id="Petr" class="springhometask.api.model.Contact">
+        <property name="firstName" value="Petr"/>
+        <property name="lastName" value="Petrov"/>
+        <property name="phoneNumber" value="2"/>
+    </bean>
+
+    <bean id="Sidor" class="springhometask.api.model.Contact">
+        <property name="firstName" value="Sidor" />
+        <property name="lastName" value="Sidorov" />
+        <property name="phoneNumber" value="3" />
+    </bean>
+
+</beans>
